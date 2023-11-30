@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = 'I love Astro'
+const articles = await Astro.glob('../pages/articles/**/*.mdx')
+---
+
+
+<Layout title={title}>
+    {
+        articles.map((article) => (
+            
+            <a href={`/articles/${article.frontmatter.slug}`}>{article.frontmatter.title}</a>
+            
+        ))
+    }
+</Layout>
+
+<style>
+    html {
+        color: white;
+    }
+</style>
