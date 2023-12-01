@@ -8,10 +8,10 @@ const articles = await Astro.glob('../pages/articles/**/*.mdx')
   {
     articles.map((article) => (
       <div class="snippet-container">
-        <span class="date">{article.frontmatter.pubDate.slice(0, 10)}</span>
         <a href={`/articles/${article.frontmatter.slug}`} class="article-title">
           {article.frontmatter.title}
         </a>
+        <span class="date">{article.frontmatter.pubDate.slice(0, 10)}</span>
       </div>
     ))
   }
@@ -20,8 +20,10 @@ const articles = await Astro.glob('../pages/articles/**/*.mdx')
 <style>
   .snippet-container {
     display: flex;
-    gap: 6rem;
-    width: 60%;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    width: 80%;
     margin-bottom: 3rem;
   }
 
@@ -33,6 +35,8 @@ const articles = await Astro.glob('../pages/articles/**/*.mdx')
     color: var(--color-primary-main);
     text-decoration: underline 0.2rem var(--color-primary-main);
     text-underline-offset: 0.7em;
+    line-height: 2rem;
+    max-width: 55ch;
     /* text-decoration-skip-ink: none; */
 
     &:hover {

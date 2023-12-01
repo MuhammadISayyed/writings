@@ -19,8 +19,10 @@ const title = frontmatter.title
 
   .article-title {
     margin-block: 3rem;
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-primary-main);
+    max-width: 20ch;
+    line-height: 1.1;
   }
 
   h2,
@@ -34,5 +36,11 @@ const title = frontmatter.title
 
   p {
     margin-block: 0.8rem;
+  }
+
+  @media (max-width: 415px) {
+    .content-container {
+      width: 80%;
+    }
   }
 </style>
