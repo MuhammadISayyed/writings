@@ -1,22 +1,43 @@
 ---
-import Layout from "../layouts/Layout.astro";
-const title = 'I love Astro'
+import Layout from '../layouts/Layout.astro'
+const title = 'The pixelated thoughts of Muhammad Ibrahim'
 const articles = await Astro.glob('../pages/articles/**/*.mdx')
 ---
 
-
 <Layout title={title}>
-    {
-        articles.map((article) => (
-            
-            <a href={`/articles/${article.frontmatter.slug}`}>{article.frontmatter.title}</a>
-            
-        ))
-    }
+  {
+    articles.map((article) => (
+      <div class="snippet-container">
+        <span class="date">{article.frontmatter.pubDate.slice(0, 10)}</span>
+        <a href={`/articles/${article.frontmatter.slug}`} class="article-title">
+          {article.frontmatter.title}
+        </a>
+      </div>
+    ))
+  }
 </Layout>
 
 <style>
-    html {
-        color: white;
+  .snippet-container {
+    display: flex;
+    gap: 6rem;
+    width: 60%;
+    margin-bottom: 3rem;
+  }
+
+  .date {
+    color: var(--color-dark-neutral);
+  }
+
+  .article-title {
+    color: var(--color-primary-main);
+    text-decoration: underline 0.2rem var(--color-primary-main);
+    text-underline-offset: 0.7em;
+    /* text-decoration-skip-ink: none; */
+
+    &:hover {
+      color: var(--color-dark-main);
+      text-decoration-color: var(--color-dark-main);
     }
+  }
 </style>
