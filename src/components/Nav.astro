@@ -1,0 +1,32 @@
+<nav>
+  <a class="logo" href="/">Muhammad Ibrahim</a>
+  <ul class="nav-links">
+    <li><a href="/articles">Articles</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="#">Get in touch</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    width: 60%;
+    margin-block: 3rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+
+    & li > a:hover {
+      color: var(--color-primary-main);
+    }
+  }
+
+  .logo {
+    font-weight: 600;
+  }
+</style>
