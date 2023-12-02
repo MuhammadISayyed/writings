@@ -24,7 +24,7 @@ const articles = await Astro.glob('../pages/articles/**/*.mdx')
     margin-top: 1.5rem;
     gap: 1rem;
     width: 80%;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
   }
 
   .date {
@@ -42,6 +42,7 @@ const articles = await Astro.glob('../pages/articles/**/*.mdx')
     &:hover {
       color: var(--color-dark-main);
       text-decoration-color: var(--color-dark-main);
+      transition: all 0.2s ease-in;
     }
   }
 </style>
