@@ -17,7 +17,7 @@ import Nav from '../components/Nav.astro'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100;0,8..30,200;0,8..30,300;0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;0,8..30,800;0,8..30,900;1,8..30,100;1,8..30,200;1,8..30,300;1,8..30,400;1,8..30,500;1,8..30,600;1,8..30,700;1,8..30,800;1,8..30,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
@@ -121,13 +121,28 @@ import Nav from '../components/Nav.astro'
   }
 
   body {
-    font-family: 'Piazzolla', serif;
+    font-family: 'PleinVariable', serif;
     color: var(--color-text-main);
   }
 
   p {
     font-size: 1.2rem;
     max-width: 55ch;
+  }
+
+  /* Register your custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: 'PleinVariable';
+    src: url('../../public/fonts/plein-variable/Plein-Variable.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PleinVariable';
+    src: url('../../public/fonts/plein-variable/Plein-VariableItalic.ttf') format('truetype');
+    font-display: swap;
+    font-style: italic;
   }
 </style>
 

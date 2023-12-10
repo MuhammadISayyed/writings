@@ -5,19 +5,44 @@ const title = 'About Muhammad Ibrahim'
 
 <Layout title={title}>
   <div class="about-container">
+    <p>Welcome to my blog! My name is Muhammad Ibrahim.</p>
+
     <p>
-      Hi there, I'm Muhammad Ibrahim, a marketer based in Cairo, Egypt. My marketing career started
-      in 2015 as a seo specialist, then I wore many hats, as a marketing specialist, strategist and
-      copywriter. In the process I learned that there's a value to being a generalist, mainly seeing
-      the big picture that's rarely the center of attention, yet has the power of transforming your
-      entire business, for better or worse.
+      The initial intention for this blog was to make it marketing-focused, so that it serves my
+      career. This was immediately discouraged, as I don’t give a fuck about framing myself as a
+      marketing guru.
+    </p>
+
+    <p>
+      So I write about whatever feels interesting to me. That could be marketing, but also
+      complexity, building products or philosophy. Whatever seduces my interest wins the next
+      article.
+    </p>
+
+    <p>
+      How I see this blog succeeding is twofold. First, it has to motivate me to learn and write
+      more; second, it should intrigue your intellect. I’m not gonna write about best practices
+      (they’re almost always shitty.) And I’m not interested in being nice or extolling the status
+      quo.
     </p>
   </div>
 </Layout>
 
 <style>
   .about-container {
+    display: flex;
+    flex-direction: column;
     margin-top: 3rem;
-    width: 80%;
+    width: 50%;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  @media (max-width: 767px) {
+    .about-container {
+      width: 80%;
+    }
   }
 </style>

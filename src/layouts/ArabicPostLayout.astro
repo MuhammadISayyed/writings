@@ -5,7 +5,7 @@ const title = frontmatter.title
 ---
 
 <Layout title={title}>
-  <div class="content-container">
+  <div class="content-container" dir="rtl">
     <h1 class="article-title">{frontmatter.title}</h1>
     <slot />
   </div>
@@ -15,6 +15,7 @@ const title = frontmatter.title
   .content-container {
     display: flex;
     flex-direction: column;
+    font-family: 'Vazirmatn', sans-serif;
   }
 
   .article-title {
@@ -36,9 +37,6 @@ const title = frontmatter.title
 
   p {
     margin-block: 0.8rem;
-    &:last-child {
-      margin-bottom: 3rem;
-    }
   }
 
   @media (max-width: 415px) {
